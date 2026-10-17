@@ -1,0 +1,6 @@
+{
+  "name": "Ngepet Online - Komunitas Digital Marketing & AI",
+  "description": "Gak Harus Pintar, Yang Penting Mau Belajar. Komunitas praktisi bisnis online, AI automation, dan trafik digital tanpa tumbal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
