@@ -84,15 +84,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGutenberg, onOpenQuiz }) =
             <span>Tes Khodam</span>
           </button>
 
-          <button
-            onClick={onOpenGutenberg}
-            type="button"
-            className="hidden md:flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs font-medium text-neutral-400 hover:text-emerald-300 bg-neutral-900/60 hover:bg-neutral-800 rounded-lg border border-white/5 transition-colors whitespace-nowrap shrink-0"
-            title="Template WordPress FSE & Gutenberg JSON"
-          >
-            <Terminal className="w-3.5 h-3.5 text-emerald-500" />
-            <span>WP FSE</span>
-          </button>
 
           <a
             href="#pintu-gaib"
