@@ -75,6 +75,29 @@ export default function App() {
         onOpenQuiz={() => setIsQuizOpen(true)}
       />
 
+      {/* Mobile Sticky Bottom Thumb-Zone Bar (Visible only on mobile screens < 640px) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0c0e12]/95 backdrop-blur-md border-t border-white/10 px-3 py-2 flex items-center justify-between gap-2 shadow-2xl">
+        <a
+          href="#kitab-sakti"
+          className="flex-1 py-2 px-2 text-center text-xs font-semibold text-neutral-300 hover:text-white bg-white/5 rounded-lg border border-white/5"
+        >
+          Kitab Sakti
+        </a>
+        <button
+          onClick={() => setIsQuizOpen(true)}
+          type="button"
+          className="flex-1 py-2 px-2 text-center text-xs font-semibold text-emerald-400 bg-white/5 rounded-lg border border-white/5"
+        >
+          Tes Khodam
+        </button>
+        <a
+          href="#pintu-gaib"
+          className="flex-2 py-2 px-3 text-center text-xs font-bold text-neutral-950 bg-emerald-400 rounded-lg shadow-sm"
+        >
+          Masuk Padepokan
+        </a>
+      </div>
+
       {/* Interactive Modals */}
       <KhodamQuizModal
         isOpen={isQuizOpen}

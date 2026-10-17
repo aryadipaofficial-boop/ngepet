@@ -3,18 +3,18 @@ import { Target, Compass, HeartHandshake, Laptop, Sparkles } from 'lucide-react'
 
 export const StorySection: React.FC = () => {
   return (
-    <section id="kisah" className="py-20 bg-[#0c0e12] border-b border-white/10 relative">
+    <section id="kisah" className="py-14 sm:py-20 bg-[#0c0e12] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Lead */}
-        <div className="max-w-3xl mb-14">
-          <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+        <div className="max-w-3xl mb-10 sm:mb-14">
+          <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
             Section 03 · Kisah &amp; Filosofi Padepokan
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Dari Stigma Kamar Gelap Menuju Kemakmuran Digital
           </h2>
-          <p className="mt-3 text-neutral-300 text-base sm:text-lg">
+          <p className="mt-2.5 sm:mt-3 text-neutral-300 text-sm sm:text-lg">
             Menjawab kecurigaan tetangga dengan karya nyata, bukan dengan debat kusir di pos ronda.
           </p>
         </div>

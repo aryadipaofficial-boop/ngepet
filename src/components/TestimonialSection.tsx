@@ -10,29 +10,29 @@ export const TestimonialSection: React.FC = () => {
     : TESTIMONIALS.filter((t) => t.category === filter);
 
   return (
-    <section id="testimoni" className="py-20 bg-[#0c0e12] border-b border-white/10 relative">
+    <section id="testimoni" className="py-14 sm:py-20 bg-[#0c0e12] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-5 sm:gap-6">
           <div className="max-w-2xl">
-            <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+            <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
               Section 05 · Bukti &amp; Cerita Warga
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
               Gunjingan Warga: Yang Sudah Sukses &ldquo;Ngepet&rdquo;
             </h2>
-            <p className="mt-3 text-neutral-300 text-base sm:text-lg">
+            <p className="mt-2.5 sm:mt-3 text-neutral-300 text-sm sm:text-base lg:text-lg">
               Kisah nyata warga padepokan yang sempat digosipin tetangga punya pesugihan, padahal cuma rajin praktik ilmu digital marketing.
             </p>
           </div>
 
-          {/* Interactive Filter Tabs (Segmented control) */}
-          <div className="flex items-center gap-1.5 p-1 bg-[#12161f] border border-white/10 rounded-xl overflow-x-auto max-w-full">
+          {/* Interactive Filter Tabs (Segmented control) - Mobile friendly scroll */}
+          <div className="flex items-center gap-1.5 p-1 bg-[#12161f] border border-white/10 rounded-xl overflow-x-auto max-w-full no-scrollbar">
             <button
               type="button"
               onClick={() => setFilter('all')}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              className={`px-3 py-2 min-h-[40px] text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                 filter === 'all'
                   ? 'bg-emerald-400 text-neutral-950 shadow-sm'
                   : 'text-neutral-400 hover:text-white'
@@ -43,7 +43,7 @@ export const TestimonialSection: React.FC = () => {
             <button
               type="button"
               onClick={() => setFilter('tiktok')}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              className={`px-3 py-2 min-h-[40px] text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                 filter === 'tiktok'
                   ? 'bg-emerald-400 text-neutral-950 shadow-sm'
                   : 'text-neutral-400 hover:text-white'
@@ -54,7 +54,7 @@ export const TestimonialSection: React.FC = () => {
             <button
               type="button"
               onClick={() => setFilter('affiliate')}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              className={`px-3 py-2 min-h-[40px] text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                 filter === 'affiliate'
                   ? 'bg-emerald-400 text-neutral-950 shadow-sm'
                   : 'text-neutral-400 hover:text-white'
@@ -65,7 +65,7 @@ export const TestimonialSection: React.FC = () => {
             <button
               type="button"
               onClick={() => setFilter('ai')}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              className={`px-3 py-2 min-h-[40px] text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                 filter === 'ai'
                   ? 'bg-emerald-400 text-neutral-950 shadow-sm'
                   : 'text-neutral-400 hover:text-white'
@@ -76,7 +76,7 @@ export const TestimonialSection: React.FC = () => {
             <button
               type="button"
               onClick={() => setFilter('funnel')}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              className={`px-3 py-2 min-h-[40px] text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
                 filter === 'funnel'
                   ? 'bg-emerald-400 text-neutral-950 shadow-sm'
                   : 'text-neutral-400 hover:text-white'

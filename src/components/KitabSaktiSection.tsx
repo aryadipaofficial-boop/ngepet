@@ -24,24 +24,24 @@ export const KitabSaktiSection: React.FC<KitabSaktiSectionProps> = ({ onSelectLe
   };
 
   return (
-    <section id="kitab-sakti" className="py-20 bg-[#0d1016] border-b border-white/10 relative">
+    <section id="kitab-sakti" className="py-14 sm:py-20 bg-[#0d1016] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="max-w-3xl mb-12">
-          <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+        <div className="max-w-3xl mb-8 sm:mb-12">
+          <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
             Section 04 · Kurikulum &amp; Silabus
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Kitab Sakti: Jenjang Ilmu Padepokan
           </h2>
-          <p className="mt-3 text-neutral-300 text-base sm:text-lg">
+          <p className="mt-2.5 sm:mt-3 text-sm sm:text-base lg:text-lg text-neutral-300">
             Kurikulum bertahap dari pemula nol puter sampai master autopilot, dirancang agar setiap warga punya peta jalan jelas tanpa tersesat.
           </p>
         </div>
 
-        {/* Level Selector Tabs */}
-        <div className="flex flex-wrap gap-2 p-1.5 bg-[#12161f] border border-white/10 rounded-xl mb-10 max-w-2xl">
+        {/* Level Selector Tabs - Mobile horizontal scrollable */}
+        <div className="flex overflow-x-auto pb-2 sm:pb-0 gap-2 p-1.5 bg-[#12161f] border border-white/10 rounded-xl mb-6 sm:mb-10 max-w-2xl no-scrollbar">
           {CURRICULUM_DATA.map((lvl) => {
             const isActive = lvl.id === activeLevelId;
             return (
@@ -52,7 +52,7 @@ export const KitabSaktiSection: React.FC<KitabSaktiSectionProps> = ({ onSelectLe
                   setActiveLevelId(lvl.id);
                   setExpandedModuleIdx(0);
                 }}
-                className={`flex-1 min-w-[140px] px-4 py-2.5 text-xs sm:text-sm font-bold rounded-lg transition-all ${
+                className={`flex-1 min-w-[130px] sm:min-w-[140px] min-h-[44px] px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold rounded-lg transition-all whitespace-nowrap shrink-0 flex items-center justify-center ${
                   isActive
                     ? 'bg-emerald-400 text-neutral-950 shadow-md shadow-emerald-500/20'
                     : 'text-neutral-400 hover:text-white hover:bg-white/5'
@@ -65,29 +65,29 @@ export const KitabSaktiSection: React.FC<KitabSaktiSectionProps> = ({ onSelectLe
         </div>
 
         {/* Level Overview Banner */}
-        <div className="bg-[#12161f] border border-white/10 rounded-2xl p-6 sm:p-8 mb-8 relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[#12161f] border border-white/10 rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8 relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             
-            <div className="lg:col-span-8 space-y-4">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="font-mono text-xs px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+            <div className="lg:col-span-8 space-y-3.5 sm:space-y-4">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <span className="font-mono text-[11px] sm:text-xs px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
                   {activeLevel.badge}
                 </span>
-                <span className="text-xs text-neutral-400 flex items-center gap-1">
+                <span className="text-[11px] sm:text-xs text-neutral-400 flex items-center gap-1">
                   <Clock className="w-3.5 h-3.5 text-neutral-400" />
                   {activeLevel.duration}
                 </span>
-                <span className="text-xs text-neutral-400 flex items-center gap-1">
+                <span className="text-[11px] sm:text-xs text-neutral-400 flex items-center gap-1">
                   <Wrench className="w-3.5 h-3.5 text-neutral-400" />
                   {activeLevel.highlightTool}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <h3 className="text-xl sm:text-3xl font-extrabold text-white">
                 {activeLevel.name}
               </h3>
 
-              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
+              <p className="text-xs sm:text-base text-neutral-300 leading-relaxed">
                 {activeLevel.description}
               </p>
 
@@ -96,19 +96,19 @@ export const KitabSaktiSection: React.FC<KitabSaktiSectionProps> = ({ onSelectLe
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-center gap-4 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8">
+            <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end justify-center gap-4 border-t lg:border-t-0 lg:border-l border-white/10 pt-5 lg:pt-0 lg:pl-8">
               <div className="text-left lg:text-right space-y-1">
                 <div className="text-xs text-neutral-400">Total Pembelajaran:</div>
-                <div className="text-2xl font-bold font-mono text-white tabular-nums">
+                <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums">
                   {activeLevel.modulesCount} Modul Utama
                 </div>
-                <div className="text-xs text-neutral-400">Termasuk studi kasus live</div>
+                <div className="text-[11px] text-neutral-400">Termasuk studi kasus live</div>
               </div>
 
               <button
                 type="button"
                 onClick={handleRegisterForLevel}
-                className="inline-flex items-center gap-2 px-5 py-3 text-xs sm:text-sm font-bold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-all shadow-md shadow-emerald-500/20"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] text-xs sm:text-sm font-bold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-all shadow-md shadow-emerald-500/20"
               >
                 <span>Daftar Tingkat Ini</span>
                 <ArrowRight className="w-4 h-4" />

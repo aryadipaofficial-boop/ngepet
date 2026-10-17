@@ -13,31 +13,31 @@ export const FaqSection: React.FC = () => {
   );
 
   return (
-    <section id="faq" className="py-20 bg-[#0d1016] border-b border-white/10 relative">
+    <section id="faq" className="py-14 sm:py-20 bg-[#0d1016] border-b border-white/10 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
             Section 06 · Klarifikasi &amp; Pertanyaan Tetangga
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Tanya Jawab Seputar Padepokan (FAQ)
           </h2>
-          <p className="mt-3 text-neutral-300 text-base">
+          <p className="mt-2.5 sm:mt-3 text-neutral-300 text-sm sm:text-base">
             Jawaban lugas dan tanpa basa-basi untuk semua kecurigaan dan rasa penasaranmu sebelum bergabung.
           </p>
         </div>
 
         {/* Search Bar for FAQ */}
-        <div className="relative mb-8 max-w-lg mx-auto">
+        <div className="relative mb-6 sm:mb-8 max-w-lg mx-auto">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Cari pertanyaan... (contoh: pesugihan, biaya, gaptek)"
-            className="w-full pl-10 pr-4 py-2.5 text-sm bg-[#12161f] border border-white/10 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-400 transition-colors"
+            placeholder="Cari pertanyaan... (contoh: pesugihan, biaya)"
+            className="w-full pl-10 pr-4 py-3 text-base sm:text-sm bg-[#12161f] border border-white/10 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-400 transition-colors"
           />
         </div>
 

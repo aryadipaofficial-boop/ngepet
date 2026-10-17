@@ -91,53 +91,54 @@ export const KhodamQuizModal: React.FC<KhodamQuizModalProps> = ({
   const result = currentStep === questions.length ? calculateResult() : null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-[#12161f] border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="bg-[#12161f] border border-white/10 rounded-2xl w-full max-w-lg max-h-[92dvh] flex flex-col overflow-hidden shadow-2xl relative">
         
         {/* Modal Header */}
-        <div className="flex items-center justify-between p-5 border-b border-white/10">
+        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-white/10 bg-[#161b26] shrink-0">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
               <Sparkles className="w-4 h-4" />
             </div>
             <div>
               <h3 className="text-sm font-bold text-white">Tes Diagnosa Khodam AI</h3>
-              <p className="text-[11px] text-neutral-400">Padepokan Ngepet Online</p>
+              <p className="text-[10px] sm:text-[11px] text-neutral-400">Padepokan Ngepet Online</p>
             </div>
           </div>
 
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-neutral-400 hover:text-white transition-colors"
+            className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-neutral-400 hover:text-white transition-colors min-h-[44px] min-w-[44px]"
+            aria-label="Tutup Diagnosa"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Modal Body */}
-        <div className="p-6">
+        <div className="p-4 sm:p-6 overflow-y-auto flex-1">
           {currentStep < questions.length ? (
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               
               <div className="flex items-center justify-between text-xs text-neutral-400">
                 <span>Pertanyaan {currentStep + 1} dari {questions.length}</span>
-                <span className="font-mono text-emerald-400">{Math.round(((currentStep + 1) / questions.length) * 100)}%</span>
+                <span className="font-mono text-emerald-400 font-bold">{Math.round(((currentStep + 1) / questions.length) * 100)}%</span>
               </div>
 
-              <h4 className="text-base sm:text-lg font-bold text-white leading-snug">
+              <h4 className="text-sm sm:text-lg font-bold text-white leading-snug">
                 {questions[currentStep].question}
               </h4>
 
-              <div className="space-y-3">
+              <div className="space-y-2.5 sm:space-y-3">
                 {questions[currentStep].options.map((opt, idx) => (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => handleSelectOption(opt.score)}
-                    className="w-full text-left p-4 rounded-xl bg-neutral-900/70 hover:bg-neutral-800 border border-white/5 hover:border-emerald-500/30 text-xs sm:text-sm text-neutral-200 hover:text-white transition-all flex items-center justify-between group"
+                    className="w-full text-left p-3.5 sm:p-4 min-h-[48px] rounded-xl bg-neutral-900/70 hover:bg-neutral-800 border border-white/5 hover:border-emerald-500/30 text-xs sm:text-sm text-neutral-200 hover:text-white transition-all flex items-center justify-between group active:scale-[0.99]"
                   >
                     <span>{opt.label}</span>
-                    <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-emerald-400 shrink-0 ml-3" />
+                    <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-emerald-400 shrink-0 ml-2" />
                   </button>
                 ))}
               </div>

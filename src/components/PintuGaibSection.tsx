@@ -46,7 +46,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
   };
 
   return (
-    <section id="pintu-gaib" className="py-20 bg-[#0c0e12] relative overflow-hidden">
+    <section id="pintu-gaib" className="py-14 sm:py-20 bg-[#0c0e12] relative overflow-hidden">
       {/* Background radial glow */}
       <div 
         aria-hidden="true" 
@@ -56,23 +56,23 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
             Section 07 · Pintu Masuk Komunitas
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Pintu Gaib: Mulai Ritual Belajar
           </h2>
-          <p className="mt-3 text-neutral-300 text-base">
+          <p className="mt-2.5 sm:mt-3 text-neutral-300 text-sm sm:text-base">
             Isi identitas digitalmu. Dapatkan akses instan ke lounge WhatsApp resmi, channel Telegram sinyal algoritma, dan ruang voice Discord.
           </p>
         </div>
 
         {!submitted ? (
-          <div className="bg-[#12161f] border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="bg-[#12161f] border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-10 shadow-2xl">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                 
                 {/* Full Name */}
                 <div className="space-y-2">
@@ -86,7 +86,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Contoh: Budi Santoso"
-                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-base sm:text-sm focus:outline-none focus:border-emerald-400 transition-colors"
                   />
                   {errors.fullName && (
                     <p className="text-xs text-red-400">{errors.fullName}</p>
@@ -105,7 +105,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="contoh: budi@gmail.com"
-                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-base sm:text-sm focus:outline-none focus:border-emerald-400 transition-colors"
                   />
                   {errors.email && (
                     <p className="text-xs text-red-400">{errors.email}</p>
@@ -114,7 +114,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
 
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                 
                 {/* WhatsApp / Telegram */}
                 <div className="space-y-2">
@@ -128,7 +128,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                     value={formData.whatsapp}
                     onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                     placeholder="08123456789 atau @username_tele"
-                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-base sm:text-sm focus:outline-none focus:border-emerald-400 transition-colors"
                   />
                   {errors.whatsapp && (
                     <p className="text-xs text-red-400">{errors.whatsapp}</p>
@@ -144,7 +144,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                     id="reg-experience"
                     value={formData.experienceLevel}
                     onChange={(e) => setFormData({ ...formData, experienceLevel: e.target.value as any })}
-                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white text-base sm:text-sm focus:outline-none focus:border-emerald-400 transition-colors"
                   >
                     <option value="pemula">Tingkat 1: Jin Lampu Kuning (Pemula Nol Puter)</option>
                     <option value="menengah">Tingkat 2: Dukun Trafik (Pernah Jualan &amp; Ads)</option>
@@ -159,7 +159,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                 <span className="text-xs font-bold text-neutral-200 uppercase tracking-wider block">
                   Jalur Cuan yang Ingin Didalami Pertama Kali:
                 </span>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 text-xs">
                   {[
                     { id: 'affiliate', label: 'Affiliate TikTok & Shopee' },
                     { id: 'tiktok_ads', label: 'Meta & TikTok Ads' },
@@ -170,7 +170,7 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                       key={interest.id}
                       type="button"
                       onClick={() => setFormData({ ...formData, primaryInterest: interest.id as any })}
-                      className={`p-3 rounded-xl border text-center transition-all ${
+                      className={`p-3 min-h-[44px] rounded-xl border text-center transition-all flex items-center justify-center ${
                         formData.primaryInterest === interest.id
                           ? 'bg-emerald-950/40 border-emerald-400 text-emerald-300 font-bold'
                           : 'bg-neutral-900/50 border-white/5 text-neutral-400 hover:text-white'
@@ -192,8 +192,8 @@ export const PintuGaibSection: React.FC<PintuGaibSectionProps> = ({ selectedLeve
                   rows={2}
                   value={formData.motivation}
                   onChange={(e) => setFormData({ ...formData, motivation: e.target.value })}
-                  placeholder="Contoh: Pengen punya penghasilan sampingan 10 juta/bulan biar bisa beli laptop baru tanpa minta ortu..."
-                  className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-emerald-400 transition-colors resize-none"
+                  placeholder="Contoh: Pengen punya penghasilan sampingan 10 juta/bulan..."
+                  className="w-full px-4 py-3 bg-neutral-900/90 border border-white/10 rounded-xl text-white placeholder-neutral-500 text-base sm:text-sm focus:outline-none focus:border-emerald-400 transition-colors resize-none"
                 />
               </div>
 

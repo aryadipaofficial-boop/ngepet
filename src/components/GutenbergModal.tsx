@@ -36,88 +36,89 @@ TECHNICAL REQUIREMENTS:
 - Color Palette: Dark background (#0c0e12), Neon Green accents (#22c55e - representing rising charts/matrix), and Red accents (#ef4444).`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-[#12161f] border border-white/10 rounded-2xl w-full max-w-4xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="bg-[#12161f] border border-white/10 rounded-2xl w-full max-w-4xl max-h-[92dvh] sm:max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
         
         {/* Modal Header */}
-        <div className="flex items-center justify-between p-5 border-b border-white/10 bg-[#161b26]">
+        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-white/10 bg-[#161b26]">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
-              <Terminal className="w-5 h-5" />
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+              <Terminal className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-white flex items-center gap-2">
-                <span>WordPress FSE &amp; Gutenberg Kit</span>
-                <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">
-                  Bagian 2 Blueprint
+              <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                <span>WordPress FSE &amp; Gutenberg</span>
+                <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded">
+                  Bagian 2
                 </span>
               </h3>
-              <p className="text-xs text-neutral-400">
-                Spesifikasi teknis Native WordPress Full Site Editing &amp; Block Markup
+              <p className="text-[11px] sm:text-xs text-neutral-400">
+                Spesifikasi teknis Native WordPress Full Site Editing
               </p>
             </div>
           </div>
 
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-neutral-400 hover:text-white transition-colors"
+            className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-neutral-400 hover:text-white transition-colors min-h-[44px] min-w-[44px]"
+            aria-label="Tutup Modal"
           >
-            <X className="w-4 h-4" />
+            <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex items-center gap-1 p-2 bg-[#0d1016] border-b border-white/5 text-xs overflow-x-auto">
+        <div className="flex items-center gap-1 p-2 bg-[#0d1016] border-b border-white/5 text-xs overflow-x-auto no-scrollbar">
           <button
             type="button"
             onClick={() => setActiveTab('architecture')}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-semibold transition-colors whitespace-nowrap ${
+            className={`flex items-center gap-1.5 px-3 py-2 min-h-[40px] rounded-lg font-semibold transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'architecture'
                 ? 'bg-neutral-800 text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
             <Layers className="w-3.5 h-3.5 text-emerald-400" />
-            <span>1. Arsitektur Gutenberg</span>
+            <span>1. Arsitektur</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('gutenberg-markup')}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-semibold transition-colors whitespace-nowrap ${
+            className={`flex items-center gap-1.5 px-3 py-2 min-h-[40px] rounded-lg font-semibold transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'gutenberg-markup'
                 ? 'bg-neutral-800 text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
             <Code className="w-3.5 h-3.5 text-emerald-400" />
-            <span>2. Homepage Block Markup</span>
+            <span>2. Block Markup</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('custom-css')}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-semibold transition-colors whitespace-nowrap ${
+            className={`flex items-center gap-1.5 px-3 py-2 min-h-[40px] rounded-lg font-semibold transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'custom-css'
                 ? 'bg-neutral-800 text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
             <FileCode className="w-3.5 h-3.5 text-red-400" />
-            <span>3. Custom CSS FSE</span>
+            <span>3. Custom CSS</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('prompt')}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-semibold transition-colors whitespace-nowrap ${
+            className={`flex items-center gap-1.5 px-3 py-2 min-h-[40px] rounded-lg font-semibold transition-colors whitespace-nowrap shrink-0 ${
               activeTab === 'prompt'
                 ? 'bg-neutral-800 text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
             <Terminal className="w-3.5 h-3.5 text-sky-400" />
-            <span>4. Master AI Prompt</span>
+            <span>4. Master Prompt</span>
           </button>
         </div>
 

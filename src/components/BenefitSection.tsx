@@ -3,39 +3,39 @@ import { Flame, Cpu, Users, Zap, Check, X, ShieldAlert, Sparkles } from 'lucide-
 
 export const BenefitSection: React.FC = () => {
   return (
-    <section id="benefit" className="py-20 bg-[#0d1016] border-b border-white/10 relative">
+    <section id="benefit" className="py-14 sm:py-20 bg-[#0d1016] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
-          <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+        <div className="max-w-3xl mb-10 sm:mb-14">
+          <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
             Section 02 · Nilai Utama Komunitas
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Kenapa Harus Gabung Warga Pesugihan?
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-neutral-300">
+          <p className="mt-2.5 sm:mt-3 text-sm sm:text-base lg:text-lg text-neutral-300">
             Tinggalkan mitos kuno yang bikin sial. Di sini kita membedah sains konversi, algoritma paid traffic, dan automasi AI dengan santai tapi berpenghasilan nyata.
           </p>
         </div>
 
         {/* Bento Grid with Asymmetric Hierarchy */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           
           {/* Card 1 (Span 2): Tanpa Tumbal (Organik & Ads) + Cyber Photo Visual */}
-          <div className="md:col-span-2 rounded-2xl bg-[#12161f] border border-white/10 p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between">
+          <div className="md:col-span-2 rounded-2xl bg-[#12161f] border border-white/10 p-5 sm:p-8 relative overflow-hidden flex flex-col justify-between">
             <div className="relative z-10 space-y-4 max-w-xl">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                <Flame className="w-6 h-6" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                <Flame className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-white tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 Tanpa Tumbal (Organik &amp; Ads)
               </h3>
-              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+              <p className="text-neutral-300 text-xs sm:text-base leading-relaxed">
                 Mendatangkan ribuan calon pembeli yang siap bayar ke tokomu tanpa perlu tumbal ayam cemani apalagi waktu tidurmu. Kuasai Meta Ads (Facebook &amp; Instagram), TikTok Ads, dan SEO organik yang terbukti stabil menghasilkan omset jangka panjang.
               </p>
 
-              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-neutral-300">
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs text-neutral-300">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3" />
@@ -64,15 +64,15 @@ export const BenefitSection: React.FC = () => {
             </div>
 
             {/* Inset visual background thumbnail */}
-            <div className="mt-6 pt-6 border-t border-white/5 flex items-center gap-4">
+            <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-white/5 flex items-center gap-3 sm:gap-4">
               <img
                 src="/src/assets/images/hero_ngepet_cyber_1792229846732.jpg"
                 alt="Meja Kerja Warga Pesugihan Cyber"
-                className="w-24 h-16 rounded-lg object-cover border border-white/10 shrink-0"
+                className="w-16 h-12 sm:w-24 sm:h-16 rounded-lg object-cover border border-white/10 shrink-0"
                 referrerPolicy="no-referrer"
               />
-              <div className="text-xs text-neutral-400">
-                <span className="font-semibold text-neutral-200">Meja Kerja Warga:</span> Cukup laptop, koneksi internet, dan secangkir kopi. Nyalakan lilin analitik ads Anda.
+              <div className="text-[11px] sm:text-xs text-neutral-400 leading-snug">
+                <span className="font-semibold text-neutral-200">Meja Kerja Warga:</span> Cukup laptop, internet, dan secangkir kopi. Nyalakan lilin analitik ads Anda.
               </div>
             </div>
           </div>

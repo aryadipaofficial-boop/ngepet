@@ -54,35 +54,35 @@ export const CalculatorSection: React.FC = () => {
   const suspicion = getSuspicionDetails(suspicionScore);
 
   return (
-    <section id="kalkulator" className="py-20 bg-[#0a0c10] border-b border-white/10 relative">
+    <section id="kalkulator" className="py-14 sm:py-20 bg-[#0a0c10] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="text-[11px] sm:text-xs font-semibold text-emerald-400 tracking-wider uppercase mb-2">
             Interactive Tool · Simulasi Cuan &amp; Gunjingan
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Kalkulator Cuan Rebahan &amp; Sensor Curiga Tetangga
           </h2>
-          <p className="mt-3 text-neutral-300 text-base sm:text-lg">
+          <p className="mt-2.5 sm:mt-3 text-neutral-300 text-sm sm:text-base lg:text-lg">
             Berapa potensi transferan yang bisa kamu hasilkan dengan modal rebahan dan sejauh apa tetanggamu bakal mulai curiga?
           </p>
         </div>
 
         {/* Calculator Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           
           {/* Controls Panel (7 Cols) */}
-          <div className="lg:col-span-7 bg-[#12161f] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6">
+          <div className="lg:col-span-7 bg-[#12161f] border border-white/10 rounded-2xl p-5 sm:p-8 space-y-5 sm:space-y-6">
             
             {/* Input 1: Jam Jaga Lilin */}
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <label htmlFor={hoursInputId} className="text-sm font-semibold text-white">
-                  Jam &ldquo;Jaga Lilin&rdquo; (Waktu Belajar/Praktek di Laptop)
+            <div className="space-y-2.5">
+              <div className="flex justify-between items-center text-xs sm:text-sm font-semibold text-white">
+                <label htmlFor={hoursInputId} className="cursor-pointer">
+                  Jam &ldquo;Jaga Lilin&rdquo; (Waktu di Laptop)
                 </label>
-                <span className="font-mono text-emerald-400 font-bold text-base tabular-nums">
+                <span className="font-mono text-emerald-400 font-bold text-sm sm:text-base tabular-nums">
                   {hours} Jam / Hari
                 </span>
               </div>
@@ -94,22 +94,22 @@ export const CalculatorSection: React.FC = () => {
                 step="1"
                 value={hours}
                 onChange={(e) => setHours(Number(e.target.value))}
-                className="w-full accent-emerald-500 cursor-pointer h-2 bg-neutral-800 rounded-lg"
+                className="w-full accent-emerald-500 cursor-pointer h-3 bg-neutral-800 rounded-lg touch-none"
               />
-              <div className="flex justify-between text-[11px] text-neutral-400 font-mono">
-                <span>1 Jam (Sambil Nonton TV)</span>
-                <span>5 Jam (Fokus Penuh)</span>
-                <span>10 Jam (Mode Sepuh)</span>
+              <div className="flex justify-between text-[10px] sm:text-[11px] text-neutral-400 font-mono">
+                <span>1 Jam (Santai)</span>
+                <span>5 Jam (Fokus)</span>
+                <span>10 Jam (Sepuh)</span>
               </div>
             </div>
 
             {/* Input 2: Modal Awal Iklan / Kuota */}
-            <div className="space-y-3 pt-2">
-              <div className="flex justify-between items-center">
-                <label htmlFor={budgetInputId} className="text-sm font-semibold text-white">
-                  Modal Anggaran Bulanan (Kuota / Iklan Uji Coba)
+            <div className="space-y-2.5 pt-2">
+              <div className="flex justify-between items-center text-xs sm:text-sm font-semibold text-white">
+                <label htmlFor={budgetInputId} className="cursor-pointer">
+                  Modal Anggaran Bulanan
                 </label>
-                <span className="font-mono text-emerald-400 font-bold text-base tabular-nums">
+                <span className="font-mono text-emerald-400 font-bold text-sm sm:text-base tabular-nums">
                   Rp {budget.toLocaleString('id-ID')}
                 </span>
               </div>
@@ -121,9 +121,9 @@ export const CalculatorSection: React.FC = () => {
                 step="50000"
                 value={budget}
                 onChange={(e) => setBudget(Number(e.target.value))}
-                className="w-full accent-emerald-500 cursor-pointer h-2 bg-neutral-800 rounded-lg"
+                className="w-full accent-emerald-500 cursor-pointer h-3 bg-neutral-800 rounded-lg touch-none"
               />
-              <div className="flex justify-between text-[11px] text-neutral-400 font-mono">
+              <div className="flex justify-between text-[10px] sm:text-[11px] text-neutral-400 font-mono">
                 <span>Rp 50rb (Paket Data)</span>
                 <span>Rp 1jt (Ads Pemula)</span>
                 <span>Rp 5jt (Scale Up)</span>
